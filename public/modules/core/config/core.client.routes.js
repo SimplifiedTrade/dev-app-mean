@@ -15,7 +15,12 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 state('test', {
                         url: '/test',
                         templateUrl: 'modules/core/views/test.client.view.html'
-                })
+                }).
+		state('item', {
+			url: '/item',
+			templateUrl: 'modules/core/views/item.client.view.html'
+		})
+
 ;
 	}
 ]);
