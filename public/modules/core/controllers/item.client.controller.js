@@ -23,11 +23,9 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 //	};
 
 	$scope.post = function() {
-//	  $scope.newItem.created_by = 'tester';
-//	  $scope.newItem.created_at = Date.now();
-//	  $scope.newItem.UPC = $scope.newItem.UPC;
-	  itemService.save({created_by: 'tester', UPC: $scope.newItem, created_at: Date.now()},
-//	  itemService.save($scope.newtItem, 
+	  $scope.newItem.created_by = 'tester';
+	  $scope.newItem.created_at = Date.now();
+	  itemService.save($scope.newItem, 
 	  function(){
 	    $scope.items = itemService.query();
 	    $scope.newItem = '';
