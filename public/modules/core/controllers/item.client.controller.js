@@ -26,10 +26,10 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 	  $scope.newItem.created_by = 'tester';
 	  $scope.newItem.created_at = Date.now();
 	  $scope.newItem.UPC = $scope.UPCnumber;
-	  function(){
+	  itemService.save($scope.newtItem, function(){
 	    $scope.items = itemService.query();
 	    $scope.newItem = '';
-	  };
+	  });
 	};
 	$scope.delete = function(item)	{
 		itemService.delete({id: item._id});
