@@ -7,14 +7,14 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 	
 	// Some example string - remove in prod
         $scope.helloText = 'Item Test';
-        $scope.testuser = $scope.authentication.user;
+        $scope.testuser = $scope.authentication.user.displayName;
 
 
     	$scope.items = itemService.query();
 		$scope.newItem = "";
 
 	$scope.post = function() {
-		itemService.save({created_by: $scope.authentication.user, UPC: $scope.newItem, created_at: Date.now()}, 
+		itemService.save({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
 		function(){
 			$scope.items = itemService.query();
 			$scope.newItem = "";	
