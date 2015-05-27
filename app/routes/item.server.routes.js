@@ -11,7 +11,15 @@ router.route('/items')
 	.post(function(req, res){
 
 		var item = new Item();
-		item.text = req.body.text;
+		item.UPC = req.body.UPC;
+		item.Unit_Size = req.body.Unit_Size;
+		item.Unit_Measure = req.body.Unit_Measure;
+		item.Case_Units = req.body.Case_Units;
+		item.Unit_Price_FOB = req.body.Unit_Price_FOB;
+		item.Unit_Price_Delivered = req.body.Unit_Price_Delivered;
+		item.Suggested_Retail_Price = req.body.Suggested_Retail_Price;
+		item.Margin_FOB = req.body.Margin_FOB;
+		item.Margin_Delivered = req.body.Margin_Delivered;
 		item.created_by = req.body.created_by;
 		item.save(function(err, item) {
 			if (err){
@@ -49,7 +57,15 @@ router.route('/items/:id')
 				res.send(err);
 
 			item.created_by = req.body.created_by;
-			item.text = req.body.text;
+			item.UPC = req.body.UPC;
+			item.Unit_Size = req.body.Unit_Size;
+			item.Unit_Measure = req.body.Unit_Measure;
+			item.Case_Units = req.body.Case_Units;
+			item.Unit_Price_FOB = req.body.Unit_Price_FOB;
+			item.Unit_Price_Delivered = req.body.Unit_Price_Delivered;
+			item.Suggested_Retail_Price = req.body.Suggested_Retail_Price;
+			item.Margin_FOB = req.body.Margin_FOB;
+			item.Margin_Delivered = req.body.Margin_Delivered;
 
 			item.save(function(err, item){
 				if(err)
