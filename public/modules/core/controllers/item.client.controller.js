@@ -23,14 +23,15 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 //	};
 
 	$scope.post = function() {
-//	  $scope.newItem.created_by = 'tester';
-//	  $scope.newItem.created_at = Date.now();
-//	  $scope.newItem.UPC = $scope.UPCnumber;
-	  itemService.save({UPC = $scope.UPCnumber}, function(){
+	  $scope.newItem.created_by = $scope.authentication.user._id;
+	  $scope.newItem.created_at = Date.now();
+	  $scope.newItem.UPC = $scope.UPCnumber;
+	  itemService.save($scope.newItem, function(){
 	    $scope.items = itemService.query();
 	    $scope.newItem = '';
 	  });
 	};
+	
 	$scope.delete = function(item)	{
 		itemService.delete({id: item._id});
 		$scope.item = itemService.query();
