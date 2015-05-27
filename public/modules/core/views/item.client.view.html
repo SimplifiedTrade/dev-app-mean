@@ -20,7 +20,13 @@
 		<input class="btn submit-btn pull-right" type="submit" value="submit" />
 	</form>
 </div>                    
-                    
+<div id="item-list">
+	<h4>Item List</h4>
+		<div class="item" ng-repeat="item in items | orderBy:'created_at':true" ng-class-odd="'odd'" ng-class-even="'even'"> 
+			<p>{{item.UPC}}</p>
+			<small class="pull-right">{{item.created_at | date:"h:mma 'on' MMM d, y"}}</small>
+		</div>
+</div>                    
                     
                 </div>
             </div>
