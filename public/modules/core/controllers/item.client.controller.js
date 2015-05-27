@@ -13,12 +13,22 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
     	$scope.items = itemService.query();
 		$scope.newItem = '';
 
+//	$scope.post = function() {
+//		$scope.items.push($scope.newItem);
+//		$scope.items.push({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
+//		function(){
+//			$scope.items = itemService.query();
+//			$scope.newItem = '';	
+//		});
+//	};
+
 	$scope.post = function() {
-		$scope.items.push({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
-		function(){
-			$scope.items = itemService.query();
-			$scope.newItem = '';	
-		});
+	  $scope.newItem.created_by = $scope.authentication.user._id;
+	  $scope.newItem.created_at = Date.now();
+	  itemService.save($scope.newtItem, function(){
+	    $scope.items = itemsService.query();
+	    $scope.newItem = '';
+	  });
 	};
 	$scope.delete = function(item)	{
 		itemService.delete({id: item._id});
