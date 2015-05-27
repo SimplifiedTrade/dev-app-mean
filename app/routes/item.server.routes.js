@@ -1,10 +1,10 @@
 
-var express = require('express');
-var router = express.Router();
+'use strict';
+
 var mongoose = require( 'mongoose' );
 var Item = mongoose.model('Item');
 
-
+module.exports = function(router) {
 
 router.route('/items')
 	//creates a new item
@@ -69,5 +69,4 @@ router.route('/items/:id')
 			res.json("deleted :(");
 		});
 	});
-
-module.exports = router;
+};
