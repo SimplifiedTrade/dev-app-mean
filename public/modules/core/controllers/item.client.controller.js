@@ -23,7 +23,7 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 //	};
 
 	$scope.post = function() {
-	  $scope.newItem.created_by = 'tester';
+//	  $scope.newItem.created_by = 'tester';
 	  $scope.newItem.created_at = Date.now();
 	  $scope.newItem.UPC = $scope.UPCnumber;
 	  itemService.save($scope.newtItem, function(){
