@@ -15,7 +15,7 @@ var itemSchema = new mongoose.Schema({
 	Margin_FOB: String,
 	Margin_Delivered: String,
 	Shelf_Life_DOM_Days: String,
-	Shelf-Life_First_REC_Days: String,
+	Shelf_Life_First_REC_Days: String,
 	Internal_Reference_Code: String,
 	Internal_Item_Number: String,
 	FOB_Case_Price: String,
