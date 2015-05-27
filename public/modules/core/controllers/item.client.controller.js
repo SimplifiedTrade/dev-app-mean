@@ -11,13 +11,13 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 
 
     	$scope.items = itemService.query();
-		$scope.newItem = "";
+		$scope.newItem = {created_by: '', UPC: '', created_at: ''};;
 
 	$scope.post = function() {
 		itemService.save({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
 		function(){
 			$scope.items = itemService.query();
-			$scope.newItem = "";	
+			$scope.newItem = {created_by: '', UPC: '', created_at: ''};;	
 		});
 	};
 	$scope.delete = function(item)	{
