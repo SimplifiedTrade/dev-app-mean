@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core').controller('itemController', ['$scope', 'Authentication', 'itemService'
+angular.module('core').controller('itemController', ['$scope', 'Authentication', 'itemService',
 	function($scope, Authentication, itemService) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
