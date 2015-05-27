@@ -12,7 +12,7 @@ router.route('/items')
 
 		var item = new Item();
 		item.text = req.body.text;
-		item.created_by = 'tester';
+		item.created_by = req.body.created_by;
 		item.save(function(err, item) {
 			if (err){
 				return res.send(500, err);
@@ -48,7 +48,7 @@ router.route('/items/:id')
 			if(err)
 				res.send(err);
 
-			item.created_by = 'tester';
+			item.created_by = req.body.created_by;
 			item.text = req.body.text;
 
 			item.save(function(err, item){
