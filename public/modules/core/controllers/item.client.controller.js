@@ -12,7 +12,7 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 
     	$scope.items = itemService.query();
 		$scope.newItem = '';
-
+		$scope.UPCnumber = '';
 //	$scope.post = function() {
 //		$scope.items.push($scope.newItem);
 //		$scope.items.push({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
