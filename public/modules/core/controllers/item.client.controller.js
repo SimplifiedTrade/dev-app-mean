@@ -13,20 +13,10 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
     	$scope.items = itemService.query();
 		$scope.newItem = '';
 		$scope.UPCnumber = '';
-//	$scope.post = function() {
-//		$scope.items.push($scope.newItem);
-//		$scope.items.push({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
-//		function(){
-//			$scope.items = itemService.query();
-//			$scope.newItem = '';	
-//		});
-//	};
+
 
 	$scope.post = function() {
-//	  $scope.newItem.created_by = $scope.authentication.user._id;
-//	  $scope.newItem.created_at = Date.now();
-//	  $scope.newItem.UPC = $scope.UPCnumber;
-	  itemService.save({UPC: $scope.UPCnumber}, function(){
+	  itemService.save({created_by: $scope.authentication.user._id, UPC: $scope.UPCnumber}, function(){
 	    $scope.items = itemService.query();
 	    $scope.newItem = '';
 	  });
