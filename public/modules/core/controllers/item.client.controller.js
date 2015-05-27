@@ -7,6 +7,7 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 	
 	// Some example string - remove in prod
         $scope.helloText = 'Item Test';
+        $scope.testuser = $scope.authentication.user;
 
 
     	$scope.items = itemService.query();
