@@ -14,7 +14,7 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 		$scope.newItem = '';
 
 	$scope.post = function() {
-		itemService.push({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
+		$scope.items.push({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
 		function(){
 			$scope.items = itemService.query();
 			$scope.newItem = '';	
