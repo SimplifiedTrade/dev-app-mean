@@ -12,7 +12,7 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 
     	$scope.items = itemService.query();
 		$scope.newItem = '';
-		$scope.newItem.UPC = '';
+
 //	$scope.post = function() {
 //		$scope.items.push($scope.newItem);
 //		$scope.items.push({created_by: $scope.authentication.user.displayName, UPC: $scope.newItem, created_at: Date.now()}, 
@@ -29,7 +29,7 @@ angular.module('core').controller('itemController', ['$scope', 'Authentication',
 	  function(){
 	    $scope.items = itemService.query();
 	    $scope.newItem = '';
-	  });
+	  };
 	};
 	$scope.delete = function(item)	{
 		itemService.delete({id: item._id});
