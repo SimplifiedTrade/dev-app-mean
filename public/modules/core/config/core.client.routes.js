@@ -22,7 +22,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		}).
 		state('alpha', {
 			url: '/alpha',
-			templateUrl: 'modules/core/views/item.client.view.html'
+			templateUrl: 'modules/core/views/form.item.client.view.html'
 		}).
 		state('item.forms.wizard', {
 			url: '/item-form',
