@@ -20,6 +20,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: '/item',
 			templateUrl: 'modules/core/views/item.client.view.html'
 		}).
+		state('alpha', {
+			url: '/alpha',
+			templateUrl: 'modules/core/views/item.client.view.html'
+		}).
 		state('item.forms.wizard', {
 			url: '/item-form',
 			templateUrl: 'modules/core/views/form.item.client.view.html',
