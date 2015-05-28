@@ -20,8 +20,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: '/item',
 			templateUrl: 'modules/core/views/item.client.view.html'
 		}).
-		state('wizard', {
-			url: '/itemform',
+		state('item.forms.wizard', {
+			url: '/item-form',
 			templateUrl: 'modules/core/views/form.item.client.view.html',
 			resolve: {
 			loadPlugin: function ($ocLazyLoad) {
