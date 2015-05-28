@@ -5,4 +5,4 @@
         }, $scope.finishedWizard = function () {
             return console.log("yoo")
         }
-    }])
+    }]);
