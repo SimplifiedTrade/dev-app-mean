@@ -22,7 +22,16 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		}).
 		state('item.forms.wizard', {
 			url: '/item-form',
-			templateUrl: 'modules/core/views/form.item.client.view.html'
+			templateUrl: 'modules/core/views/form.item.client.view.html',
+			resolve: {
+			loadPlugin: function ($ocLazyLoad) {
+			return $ocLazyLoad.load([
+                        {
+                            files: ['modules/core/css/plugins/steps/jquery.steps.css']
+                        }
+                	    ]);
+                	}
+            		}
 		}).
         	state('item.forms.wizard.step_one', {
         		url: '/item-form/step_one',
