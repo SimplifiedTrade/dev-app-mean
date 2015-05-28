@@ -25,7 +25,7 @@
                 <a href="/#!/home"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
                 <a href="/#!/test" data-ng-show="authentication.user"><i class="fa fa-laptop"></i> <span class="nav-label">Test</span></a>
                 <a href="/#!/item" data-ng-show="authentication.user"><i class="fa fa-laptop"></i> <span class="nav-label">Item</span></a>
-
+                <a href="/#!/item-form" data-ng-show="authentication.user"><i class="fa fa-laptop"></i> <span class="nav-label">Item Form</span></a>
             </li>
             <li data-ng-repeat="item in menu.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" ng-class="{active: ($uiRoute)}">
                 <a href=""><i class="fa {{item.iconClass}}"></i> <span class="nav-label">{{item.title}} </span> <span ng-show="item.items" class="fa arrow"></span></a>
