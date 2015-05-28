@@ -35,6 +35,22 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
         	.state('itemformswizard.step_three', {
             		url: '/item-form/step-three',
             		templateUrl: 'modules/core/views/wizard/step_three.html'
+        	}).
+		state('promoformswizard', {
+			url: '/promo-form',
+			templateUrl: 'modules/core/views/form.promo.client.view.html'
+		}).
+        	state('promoformswizard.step_one', {
+        		url: '/promo-form/step-one',
+            		templateUrl: 'modules/core/views/promo/step_one.html'
+        	})
+        	.state('promoformswizard.step_two', {
+        		url: '/promo-form/step-two',
+        		 templateUrl: 'modules/core/views/promo/step_two.html'
+        	})
+        	.state('promoformswizard.step_three', {
+            		url: '/promo-form/step-three',
+            		templateUrl: 'modules/core/views/promo/step_three.html'
         	})
 
 	;
