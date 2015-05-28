@@ -23,8 +23,8 @@
             </li>
             <li ng-class="{active: $uiRoute}" ui-route="/" >
                 <a href="/#!/home"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
-                <a href="/#!/test"><i class="fa fa-laptop" data-ng-hide="authentication.user"></i> <span class="nav-label">Test</span></a>
-                <a href="/#!/item"><i class="fa fa-laptop" data-ng-hide="authentication.user"></i> <span class="nav-label">Item</span></a>
+                <a href="/#!/test"><i class="fa fa-laptop" data-ng-show="authentication.user"></i> <span class="nav-label">Test</span></a>
+                <a href="/#!/item"><i class="fa fa-laptop" data-ng-show="authentication.user"></i> <span class="nav-label">Item</span></a>
 
             </li>
             <li data-ng-repeat="item in menu.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" ng-class="{active: ($uiRoute)}">
