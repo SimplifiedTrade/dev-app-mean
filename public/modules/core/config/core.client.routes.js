@@ -24,7 +24,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: '/item-form',
 			templateUrl: 'modules/core/views/form.item.client.view.html'
 		}).
-        	state('itemformswizard.step_one', {
+        	state('itemformswizard.step_sone', {
         		url: '/item-form/step-one',
             		templateUrl: 'modules/core/views/wizard/step_one.html'
         	})
