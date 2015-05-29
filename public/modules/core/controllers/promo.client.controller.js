@@ -40,7 +40,7 @@ angular.module('core').controller('promoController', ['$scope', 'Authentication'
 	  	}, function(){
 	    $scope.promos = promoService.query();
 	    $scope.newPromo = {};
-	    $location.path('/promos');
+	    $scope.path('/promos');
 	  });
 	};
 	
