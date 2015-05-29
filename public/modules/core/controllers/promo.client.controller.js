@@ -40,7 +40,7 @@ angular.module('core').controller('promoController', ['$scope', '$window',  'Aut
 	  	}, function(){
 	    $scope.promos = promoService.query();
 	    $scope.newPromo = {};
-		$window.location.href = '/promo-form';
+		$window.location.href = '/#!/promo-form';
 	  });
 	};
 	
