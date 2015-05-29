@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core').controller('promoController', ['$scope', 'Authentication', 'promoService',
+angular.module('core').controller('promoController', ['$scope', '$window',  'Authentication', 'promoService',
 	function($scope, Authentication, promoService) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
@@ -40,7 +40,7 @@ angular.module('core').controller('promoController', ['$scope', 'Authentication'
 	  	}, function(){
 	    $scope.promos = promoService.query();
 	    $scope.newPromo = {};
-
+		$window.location.href = '/promo-form';
 	  });
 	};
 	
