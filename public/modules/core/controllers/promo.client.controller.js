@@ -18,9 +18,9 @@ angular.module('core').controller('promoController', ['$scope', 'Authentication'
 	  promoService.save({
 	  	  created_by: $scope.authentication.user._id
 	  	, created_by_name: $scope.authentication.user.displayName
-	  	, Account: $scope.Account
-	  	, Deal_Type: $scope.Deal_Type
-	  	, Deal_ID: $scope.Deal_ID
+	  	, Account: $scope.newPromo.Account
+	  	, Deal_Type: $scope.newPromo.Deal_Type
+	  	, Deal_ID: $scope.newPromo.Deal_ID
 
 	  	}, function(){
 	    $scope.promos = promoService.query();
