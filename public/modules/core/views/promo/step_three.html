@@ -1,9 +1,25 @@
 <fieldset>
-    <h2>Allocation</h2>
+    <div class="form-group">
+    <label>Allocation</label>
     <input id="Allocation" name="Allocation" type="radio" ng-model="newPromo.Allocation" value="true"> <label for="Allocation">Yes</label>
     <input id="Allocation" name="Allocation" type="radio" ng-model="newPromo.Allocation" value="false" checked> <label for="Allocation">No</label>
-
-
+    </div>
+    <div class="form-group">
+                <label>Allocation Quantity</label>
+                <input id="Allocation_Quantity" name="Allocation_Quantity" ng-model="newPromo.Allocation_Quantity" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+                <label>Forecast Units</label>
+                <input id="Forecast_Units" name="Forecast_Units" ng-model="newPromo.Forecast_Units" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+                <label>ROI</label>
+                <input id="ROI" name="ROI" ng-model="newPromo.ROI" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+                <label>Notes</label>
+                <input id="Notes" name="Notes" ng-model="newPromo.Notes" type="text" class="form-control">
+    </div>
 </fieldset>
 <fieldset class="m-t-md">
     <a ui-sref="promoformswizard.step_two" class="btn btn-default">Previous</a>
