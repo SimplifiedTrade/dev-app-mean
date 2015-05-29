@@ -25,15 +25,15 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/form.item.client.view.html'
 		}).
         	state('itemformswizard.step_one', {
-        		url: '/item-form/step-one',
+        		url: '/step-one',
             		templateUrl: 'modules/core/views/item/step_one.html'
         	})
         	.state('itemformswizard.step_two', {
-        		url: '/item-form/step-two',
+        		url: '/step-two',
         		 templateUrl: 'modules/core/views/item/step_two.html'
         	})
         	.state('itemformswizard.step_three', {
-            		url: '/item-form/step-three',
+            		url: '/step-three',
             		templateUrl: 'modules/core/views/item/step_three.html'
         	}).
 		state('promo', {
