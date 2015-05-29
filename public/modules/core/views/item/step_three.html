@@ -1,8 +1,33 @@
 <fieldset>
-    <h2>Terms and Conditions</h2>
-    <input id="acceptTerms" name="acceptTerms" type="checkbox" ng-model="formData.terms" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
-</fieldset>
+            <div class="form-group">
+                <label>Shelf Life DOM Days</label>
+                <input id="Shelf_Life_DOM_Days" ng-model="newItem.Shelf_Life_DOM_Days" name="Shelf_Life_DOM_Days" type="number" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Shelf Life First REC Days</label>
+                <input id="Shelf_Life_First_REC_Days" ng-model="newItem.Shelf_Life_First_REC_Days" name="Shelf_Life_First_REC_Days" type="number" class="form-control">
+            </div>            
+            <div class="form-group">
+                <label>Internal Reference Code</label>
+                <input id="Internal_Reference_Code" ng-model="newItem.Internal_Reference_Code" name="Internal_Reference_Code" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Internal Item Number</label>
+                <input id="Internal_Item_Number" ng-model="newItem.Internal_Item_Number" name="Internal_Item_Number" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Case Net Wt LBS</label>
+                <input id="Case_Net_Wt_LBS" ng-model="newItem.Case_Net_Wt_LBS" name="Case_Net_Wt_LBS" type="number" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Case UCC</label>
+                <input id="Case_UCC" ng-model="newItem.Case_UCC" name="Case_UCC" type="number" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Shelf Life DOM Days</label>
+                <input id="Shelf_Life_DOM_Days" ng-model="newItem.Shelf_Life_DOM_Days" name="Shelf_Life_DOM_Days" type="number" class="form-control">
+            </div>            
 <fieldset class="m-t-md">
-    <a ui-sref="item.forms.wizard.step_two" class="btn btn-default">Previous</a>
+    <a ui-sref="itemformswizard.step_two" class="btn btn-default">Previous</a>
     <button type="submit" class="btn btn-primary">Submit</button>
 </fieldset>
