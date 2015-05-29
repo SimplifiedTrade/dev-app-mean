@@ -26,5 +26,32 @@ var itemSchema = new mongoose.Schema({
 	Case_UCC: String
 });
 
+var promoSchema = new mongoose.Schema({
+	created_by: { type: Schema.ObjectId, ref: 'User' },
+	created_by_name: String,
+	created_at: {type: Date, default: Date.now},	
+	updated_at: {type: Date, default: Date.now},	
+	Deal_ID: String,
+	Deal_Type: String
+	Account: String,
+	Product_Group: String,
+	Feature: Boolean,
+	Display_Level: int,
+	Normal_Retail: Double,
+	Promo_Price: Double,
+	Allowance_Type: String,
+	Allowance_Amount: Double,
+	Retailer_Margin: Double,
+	Start_Date: Date,
+	End_Date: Date,
+	Allocation: Boolean,
+	Allocation_Quantity: int,
+	Allocation_UOM: String,
+	Forecast_Units: int,
+	ROI: double,
+	Notes: String
+
+});
 
 mongoose.model('Item', itemSchema);
+mongoose.model('Promo', promoSchema);
