@@ -1,5 +1,5 @@
 <section data-ng-controller="SettingsController">
-<div class="wrapper wrapper-content" data-ng-controller="promoFormController">
+<div class="wrapper wrapper-content" data-ng-controller="promoController">
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2>Wizard</h2>
@@ -40,20 +40,20 @@
                         <ul>
 
                             <li ui-sref-active="current">
-                                <a ui-sref=".step_one" class="btn-default"><span>1</span> Account information</a>
+                                <a ui-sref=".step_one" class="btn-default"><span>1</span>Product & Placement</a>
                             </li>
                             <li ui-sref-active="current">
-                                <a ui-sref=".step_two" class="btn-default"><span>2</span> Profile Information</a>
+                                <a ui-sref=".step_two" class="btn-default"><span>2</span>Financial & Duration</a>
                             </li>
                             <li ui-sref-active="current">
-                                <a ui-sref=".step_three" class="btn-default"><span>3</span> Terms and Conditions</a>
+                                <a ui-sref=".step_three" class="btn-default"><span>3</span>Advanced</a>
                             </li>
                         </ul>
                     </div>
                     <div class="wizard">
                         <div class="content">
 
-                        <form name="signupForm" ng-submit="processForm()" class="p-lg">
+                        <form name="promoForm" ng-submit="post()" class="p-lg">
 
                             <!-- our nested state views will be injected here -->
                             <div id="form-views" ui-view></div>
