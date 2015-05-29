@@ -7,6 +7,7 @@ var itemSchema = new mongoose.Schema({
 	created_at: {type: Date, default: Date.now},
 	UPC: String,
 	Description: String,
+	Product_Group: String,
 	Unit_Size: String, 
 	Unit_Measure: String,
 	Case_Units: String,
