@@ -6,7 +6,7 @@ var Promo = mongoose.model('Promo');
 
 module.exports = function(router) {
 
-router.route('/promo')
+router.route('/promos')
 	//creates a new promo
 	.post(function(req, res){
 
