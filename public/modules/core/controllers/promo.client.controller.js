@@ -11,7 +11,7 @@ angular.module('core').controller('promoController', ['$scope', 'Authentication'
 
 
     	$scope.promos = promoService.query();
-		$scope.newPromo = {};
+		$scope.newPromo = '';
 
 
 	$scope.post = function() {
@@ -24,7 +24,7 @@ angular.module('core').controller('promoController', ['$scope', 'Authentication'
 
 	  	}, function(){
 	    $scope.promos = promoService.query();
-	    $scope.newPromo = {};
+	    $scope.newPromo = '';
 	  });
 	};
 	
