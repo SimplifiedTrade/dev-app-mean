@@ -4,26 +4,48 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="form-group">
-                <label>Username *</label>
-                <input id="userName" ng-model="formData.username" name="username" type="text" class="form-control" ng-minlength="8">
-                <p ng-show="signupForm.username.$error.minlength" class="help-block">Example of validation - Username is too short (min 8 signs)</p>
+                <label>UPC</label>
+                <input id="UPC" ng-model="newItem.UPC" name="UPC" type="number" class="form-control">
+          
             </div>
             <div class="form-group">
-                <label>Password *</label>
-                <input id="password" ng-model="formData.password" name="password" type="text" class="form-control">
+                <label>Description</label>
+                <input id="Description" ng-model="newItem.Description" name="Description" type="text" class="form-control">
             </div>
             <div class="form-group">
-                <label>Confirm Password *</label>
-                <input id="confirm" name="confirm" type="text" class="form-control required">
+                <label>Product Group</label>
+                <select id="Product_Group" name="Product_Group" ng-model="newItem.Product_Group" class="form-control required" >
+                    <option value="Goldfish">Goldfish</option>
+                      <option value="Savory Crackers">Savory Crackers</option>
+                      <option value="Sweet Crackers">Sweet Crackers</option>
+                      <option value="Cookies">Cookies</option>
+                </select>
             </div>
+        <div class="col-lg-8">
+           
+            <div class="form-group">
+                <label>Unit Size</label>
+                <input id="Unit_Size" ng-model="newItem.Unit_Size" name="Unit_Size" type="number" class="form-control">
+            </div>            
+            <div class="form-group">
+                <label>Unit Measure</label>
+                <select id="Unit_Measure" name="Unit_Measure" ng-model="newItem.Unit_Measure" class="form-control required" >
+                    <option value="OZ">OZ</option>
+                      <option value="LBS">LBS</option>
+                      <option value="g">g</option>
+                      <option value="ky">kg</option>
+                </select>
+            </div>                
+            
+        </div>    
+            <div class="form-group">
+                <label>Case Units</label>
+                <input id="Case_Units" ng-model="newItem.Case_Units" name="Case_Units" type="number" class="form-control">
+            </div>            
+
+
         </div>
-        <div class="col-lg-4">
-            <div class="text-center">
-                <div style="margin-top: 20px">
-                    <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
-                </div>
-            </div>
-        </div>
+
     </div>
-    <a ui-sref="item.forms.wizard.step_two" class="btn btn-primary">Next</a>
+    <a ui-sref="itemformswizard.step_two" class="btn btn-primary">Next</a>
 </fieldset>
