@@ -5,8 +5,8 @@
         <div class="col-lg-8">
             <div class="form-group">
                 <label>Deal ID</label>
-                <input id="Deal_ID" ng-model="newPromo.Deal_ID" name="Deal_ID" type="text" class="form-control" ng-minlength="8">
-               <!-- <p ng-show="signupForm.username.$error.minlength" class="help-block">Example of validation - Username is too short (min 8 signs)</p> -->
+                <input id="Deal_ID" ng-model="newPromo.Deal_ID" name="Deal_ID" type="text" class="form-control">
+               <!-- this goes in input ng-minlength="8" <p ng-show="signupForm.username.$error.minlength" class="help-block">Example of validation - Username is too short (min 8 signs)</p> -->
           
             </div>
             <div class="form-group">
@@ -15,7 +15,12 @@
             </div>
             <div class="form-group">
                 <label>Account</label>
-                <input id="Account" name="Account" ng-model="newPromo.Account" type="text" class="form-control required">
+                <select id="Account" name="Account" ng-model="newPromo.Account" class="form-control required" >
+                    <option value="Safeway">Safeway</option>
+                      <option value="Raleys">Raleys</option>
+                      <option value="Whole Foods">Whole Foods</option>
+                </select>
+                
             </div>
         </div>
      <!--   <div class="col-lg-4">
