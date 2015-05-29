@@ -20,7 +20,19 @@
                       <option value="Raleys">Raleys</option>
                       <option value="Whole Foods">Whole Foods</option>
                 </select>
-                
+            </div>
+            <div class="form-group">
+                <label>Product Group</label>
+                <select id="Product_Group" name="Product_Group" ng-model="newPromo.Product_Group" class="form-control required" >
+                    <option value="Goldfish">Goldfish</option>
+                      <option value="Savory Crackers">Savory Crackers</option>
+                      <option value="Sweet Crackers">Sweet Crackers</option>
+                      <option value="Cookies">Cookies</option>
+                </select>
+            </div>
+            <div>
+            <input id="Feature" name="Feature" type="radio" ng-model="newPromo.Feature" value="true"> <label for="Feature">Yes</label>
+            <input id="Feature" name="Feature" type="radio" ng-model="newPromo.Feature" value="false" checked> <label for="Feature">No</label>
             </div>
         </div>
      <!--   <div class="col-lg-4">
