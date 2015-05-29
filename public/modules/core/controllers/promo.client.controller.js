@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('core').controller('promoController', ['$scope', '$window',  'Authentication', 'promoService',
-	function($scope, Authentication, promoService) {
+	function($scope, $window, Authentication, promoService) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 	
