@@ -26,15 +26,15 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		}).
         	state('itemformswizard.step_one', {
         		url: '/item-form/step-one',
-            		templateUrl: 'modules/core/views/wizard/step_one.html'
+            		templateUrl: 'modules/core/views/item/step_one.html'
         	})
         	.state('itemformswizard.step_two', {
         		url: '/item-form/step-two',
-        		 templateUrl: 'modules/core/views/wizard/step_two.html'
+        		 templateUrl: 'modules/core/views/item/step_two.html'
         	})
         	.state('itemformswizard.step_three', {
             		url: '/item-form/step-three',
-            		templateUrl: 'modules/core/views/wizard/step_three.html'
+            		templateUrl: 'modules/core/views/item/step_three.html'
         	}).
 		state('promo', {
 			url: '/promo',
@@ -50,7 +50,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
         	})
         	.state('promoformswizard.step_two', {
         		url: '/step-two',
-        		 templateUrl: 'modules/core/views/promo/step_two.html'
+        		templateUrl: 'modules/core/views/promo/step_two.html'
         	})
         	.state('promoformswizard.step_three', {
             		url: '/step-three',
