@@ -31,8 +31,18 @@
                 </select>
             </div>
             <div>
-            <input id="Feature" name="Feature" type="radio" ng-model="newPromo.Feature" value="true"> <label for="Feature">Yes</label>
-            <input id="Feature" name="Feature" type="radio" ng-model="newPromo.Feature" value="false" checked> <label for="Feature">No</label>
+                <label>Featured?</label>
+                <input id="Feature" name="Feature" type="radio" ng-model="newPromo.Feature" value="true"> <label for="Feature">Yes</label>
+                <input id="Feature" name="Feature" type="radio" ng-model="newPromo.Feature" value="false" checked> <label for="Feature">No</label>
+            </div>
+            <div>
+                <label>Display Level</label>
+                <select id="Display_Level" name="Display_Level" ng-model="newPromo.Display_Level" class="form-control required" >
+                    <option value="0">None</option>
+                      <option value="1">Low</option>
+                      <option value="2">Medium</option>
+                      <option value="3">High</option>
+                </select>
             </div>
         </div>
      <!--   <div class="col-lg-4">
