@@ -38,8 +38,8 @@ angular.module('core').controller('promoController', ['$scope', '$window',  'Aut
 		, Notes: $scope.newPromo.Notes
 
 	  	}, function(){
-	    $scope.promos = promoService.query();
-	    $scope.newPromo = {};
+		$scope.promos = promoService.query();
+		$scope.newPromo = {};
 		$window.location.href = '/#!/promo-form';
 	  });
 	};
