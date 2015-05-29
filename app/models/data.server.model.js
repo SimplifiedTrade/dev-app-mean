@@ -32,7 +32,7 @@ var promoSchema = new mongoose.Schema({
 	created_at: {type: Date, default: Date.now},	
 	updated_at: {type: Date, default: Date.now},	
 	Deal_ID: String,
-	Deal_Type: String
+	Deal_Type: String,
 	Account: String,
 	Product_Group: String,
 	Feature: Boolean,
