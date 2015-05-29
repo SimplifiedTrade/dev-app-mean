@@ -4,22 +4,35 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label>First name *</label>
-                <input id="name" name="name" ng-model="formData.name" type="text" class="form-control required">
+                <label>Normal Retail</label>
+                <input id="Normal_Retail" ng-model="newPromo.Normal_Retail" name="Normal_Retail" type="number" class="form-control">
             </div>
             <div class="form-group">
-                <label>Last name *</label>
-                <input id="surname" name="surname" ng-model="formData.lastName" type="text" class="form-control required">
+                <label>Promo Price</label>
+                <input id="Promo_Price" name="Promo_Price" ng-model="newPromo.Promo_Price" type="number" class="form-control required">
+            </div>
+            <div class="form-group">
+                <label>Allowance Type</label>
+                <select id="Allowance_Type" name="Allowance_Type" ng-model="newPromo.Allowance_Type" class="form-control required" >
+                      <option value="Scan">Scan</option>
+                      <option value="Off Invoice">Off Invoice</option>
+                      <option value="Coupon">Coupon</option>
+                      <option value="Bill Back">Bill Back</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Retailer Margin</label>
+                <input id="Retailer_Margin" name="Retailer_Margin" ng-model="newPromo.Retailer_Margin" type="number" class="form-control required">
             </div>
         </div>
         <div class="col-lg-6">
             <div class="form-group">
-                <label>Email *</label>
-                <input id="email" name="email" type="text" ng-model="formData.email" class="form-control required email">
+                <label>Start Date</label>
+                <input id="Start_Date" name="Start_Date" type="date" ng-model="newPromo.Start_Date" class="form-control required">
             </div>
             <div class="form-group">
-                <label>Address *</label>
-                <input id="address" name="address" type="text" ng-model="formData.address" class="form-control">
+                <label>End Date</label>
+                <input id="End_Date" name="End_Date" type="date" ng-model="newPromo.End_Date" class="form-control required">
             </div>
         </div>
     </div>
