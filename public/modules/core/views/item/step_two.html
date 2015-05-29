@@ -4,25 +4,41 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label>First name *</label>
-                <input id="name" name="name" ng-model="formData.name" type="text" class="form-control required">
+                <label>Suggested Retail Price</label>
+                <input id="Suggested_Retail_Price" ng-model="newItem.Suggested_Retail_Price" name="Suggested_Retail_Price" type="number" class="form-control">
             </div>
             <div class="form-group">
-                <label>Last name *</label>
-                <input id="surname" name="surname" ng-model="formData.lastName" type="text" class="form-control required">
+                <label>Unit Price FOB</label>
+                <input id="Unit_Price_FOB" ng-model="newItem.Unit_Price_FOB" name="Unit_Price_FOB" type="number" class="form-control">
+            </div>   
+            <div class="form-group">
+                <label>MOB Case Price</label>
+                <input id="MOB_Case_Price" ng-model="newItem.MOB_Case_Price" name="MOB_Case_Price" type="number" class="form-control">
             </div>
+            <div class="form-group">
+                <label>Margin FOB</label>
+                <input id="Margin_FOB" ng-model="newItem.Margin_FOB" name="Margin_FOB" type="number" class="form-control">
+            </div>               
         </div>
         <div class="col-lg-6">
             <div class="form-group">
-                <label>Email *</label>
-                <input id="email" name="email" type="text" ng-model="formData.email" class="form-control required email">
+                <label>Unit Price Delivered</label>
+                <input id="Unit_Price_Delivered" ng-model="newItem.Unit_Price_Delivered" name="Unit_Price_Delivered" type="number" class="form-control">
             </div>
             <div class="form-group">
-                <label>Address *</label>
-                <input id="address" name="address" type="text" ng-model="formData.address" class="form-control">
+                <label>Margin Delivered</label>
+                <input id="Margin_Delivered" ng-model="newItem.Margin_Delivered" name="Margin_Delivered" type="number" class="form-control">
+            </div>  
+            <div class="form-group">
+                <label>Delivered Case Price</label>
+                <input id="Delivered_Case_Price" ng-model="newItem.Delivered_Case_Price" name="Delivered_Case_Price" type="number" class="form-control">
             </div>
+            <div class="form-group">
+                <label>Pallet Ti Hi</label>
+                <input id="Pallet_Ti_Hi" ng-model="newItem.Pallet_Ti_Hi" name="Pallet_Ti_Hi" type="number" class="form-control">
+            </div>               
         </div>
     </div>
-    <a ui-sref="item.forms.wizard.step_one" class="btn btn-default">Previous</a>
-    <a ui-sref="item.forms.wizard.step_three" class="btn btn-primary">Next</a>
+    <a ui-sref="itemformswizard.step_one" class="btn btn-default">Previous</a>
+    <a ui-sref="itemformswizard.step_three" class="btn btn-primary">Next</a>
 </fieldset>
