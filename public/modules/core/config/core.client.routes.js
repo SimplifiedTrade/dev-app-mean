@@ -45,15 +45,15 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/form.promo.client.view.html'
 		}).
         	state('promoformswizard.step_one', {
-        		url: '/promo-form/step-one',
+        		url: '/step-one',
             		templateUrl: 'modules/core/views/promo/step_one.html'
         	})
         	.state('promoformswizard.step_two', {
-        		url: '/promo-form/step-two',
+        		url: '/step-two',
         		 templateUrl: 'modules/core/views/promo/step_two.html'
         	})
         	.state('promoformswizard.step_three', {
-            		url: '/promo-form/step-three',
+            		url: '/step-three',
             		templateUrl: 'modules/core/views/promo/step_three.html'
         	})
 
