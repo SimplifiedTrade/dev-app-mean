@@ -36,7 +36,7 @@ var promoSchema = new mongoose.Schema({
 	Account: String,
 	Product_Group: String,
 	Feature: Boolean,
-	Display_Level: int,
+	Display_Level: INTEGER,
 	Normal_Retail: Double,
 	Promo_Price: Double,
 	Allowance_Type: String,
@@ -45,9 +45,9 @@ var promoSchema = new mongoose.Schema({
 	Start_Date: Date,
 	End_Date: Date,
 	Allocation: Boolean,
-	Allocation_Quantity: int,
+	Allocation_Quantity: INTEGER,
 	Allocation_UOM: String,
-	Forecast_Units: int,
+	Forecast_Units: INTEGER,
 	ROI: double,
 	Notes: String
 
