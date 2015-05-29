@@ -11,19 +11,20 @@ angular.module('core').controller('promoController', ['$scope', 'Authentication'
 
 
     	$scope.promos = promoService.query();
-		$scope.newPromo = '';
+		$scope.newPromo = {};
 
 
 	$scope.post = function() {
 	  promoService.save({
 	  	  created_by: $scope.authentication.user._id
-	  	, Account: $scope.Account
-	  	, Deal_Type: $scope.Deal_Type
-	  	, Deal_ID: $scope.Deal_ID
+	  	, created_by_name: $scope.authentication.user.displayName
+	  	, newPromo.Account: $scope.Account
+	  	, newPromo.Deal_Type: $scope.Deal_Type
+	  	, newPromo.Deal_ID: $scope.Deal_ID
 
 	  	}, function(){
 	    $scope.promos = promoService.query();
-	    $scope.newPromo = '';
+	    $scope.newPromo = {};
 	  });
 	};
 	
