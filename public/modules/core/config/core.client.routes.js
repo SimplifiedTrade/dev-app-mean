@@ -36,6 +36,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
             		url: '/item-form/step-three',
             		templateUrl: 'modules/core/views/wizard/step_three.html'
         	}).
+		state('promo', {
+			url: '/promo',
+			templateUrl: 'modules/core/views/promo.client.view.html'
+		}).
 		state('promoformswizard', {
 			url: '/promo-form',
 			templateUrl: 'modules/core/views/form.promo.client.view.html'
