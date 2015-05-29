@@ -4,26 +4,27 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="form-group">
-                <label>Username *</label>
-                <input id="userName" ng-model="formData.username" name="username" type="text" class="form-control" ng-minlength="8">
-                <p ng-show="signupForm.username.$error.minlength" class="help-block">Example of validation - Username is too short (min 8 signs)</p>
+                <label>Deal ID</label>
+                <input id="Deal_ID" ng-model="Deal_ID" name="Deal_ID" type="text" class="form-control" ng-minlength="8">
+               <!-- <p ng-show="signupForm.username.$error.minlength" class="help-block">Example of validation - Username is too short (min 8 signs)</p> -->
+          
             </div>
             <div class="form-group">
-                <label>Password *</label>
-                <input id="password" ng-model="formData.password" name="password" type="text" class="form-control">
+                <label>Deal Type</label>
+                <input id="Deal_Type" ng-model="Deal_Type" name="Deal_Type" type="text" class="form-control">
             </div>
             <div class="form-group">
-                <label>Confirm Password *</label>
-                <input id="confirm" name="confirm" type="text" class="form-control required">
+                <label>Account</label>
+                <input id="Account" name="Account" ng-model="Account" type="text" class="form-control required">
             </div>
         </div>
-        <div class="col-lg-4">
+     <!--   <div class="col-lg-4">
             <div class="text-center">
                 <div style="margin-top: 20px">
                     <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <a ui-sref="promoformswizard.step_two" class="btn btn-primary">Next</a>
 </fieldset>
