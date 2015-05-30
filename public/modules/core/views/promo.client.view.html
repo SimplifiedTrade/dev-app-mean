@@ -17,34 +17,52 @@
 
     </div>
 </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-center m-t-lg">
-                    <h1>
-                        {{helloText}}
-                        {{testuser}}
-                    </h1>
-                    <small>
-                        {{descriptionText}}
-                        <br/>
-                        MEAN.JS is open-source full-stack solution for MEAN (Mongo, Express, Angular, Node) applications: <a class="btn btn-primary btn-xs" href="http://meanjs.org" target="_blank">Learn more</a>
-                    </small>
-<div class="clearfix">
-	<form ng-Submit="post()" >
+       <div class="row">
+<div class="col-lg-12">
+<div class="ibox float-e-margins animated fadeInRight">
+<div class="ibox-title">
+    <h5>Promo List</h5>
 
-		<textarea required class="form-control" maxlength="200" rows="3" placeholder="enter deal id" ng-model="Deal_ID"></textarea>
-		<input class="btn submit-btn pull-right" type="submit" value="submit" />
-	</form>
-</div>                    
-<div id="promo-list">
-	<h4>Item List</h4>
-		<div class="promo" ng-repeat="promo in promos | orderBy:'created_at':true" ng-class-odd="'odd'" ng-class-even="'even'"> 
-			<p>{{promo.UPC}}</p>
-			<small class="pull-right">{{promo.created_at | date:"h:mma 'on' MMM d, y"}}</small>
-		</div>
-</div>                    
-                    
-                </div>
-            </div>
-        </div>
+    <div ibox-tools></div>
+</div>
+<div class="ibox-content">
+    <table  class="table table-striped table-bordered table-hover dataTables-example">
+        <thead>
+        <tr>
+            <th>Deal ID</th>
+            <th>Deal Type</th>
+            <th>Account</th>       
+            <th>Product Group</th>            
+            <th>Feature</th>
+            <th>Normal Retail</th>
+	    <th>Promo Price</hd>
+	    <th>Allowance Type</th>
+	    <th>Allowance Amount</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="promo in promos">
+
+            <td>{{promo.Deal_ID}}</td>
+            <td>{{promo.Deal_Type}}</td>
+            <td>{{promo.Account}}</td>
+            <td>{{promo.Product_Group}}</td>
+	    <td>{{promo.Feature}}</td>
+	    <td>{{promo.Normal_Retail}}</td>
+	    <td>{{promo.Promo_Price}}</td>
+	    <td>{{promo.Allowance_Type}}</td>
+	    <td>{{promo.Allowance_Amount}}</td>
+            
+            
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</div>
+</div>
+</div>        
+   
     </div>
