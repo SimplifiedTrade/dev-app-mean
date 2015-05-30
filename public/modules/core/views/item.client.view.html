@@ -42,15 +42,16 @@
         </thead>
         <tbody>
         <tr ng-repeat="item in items">
+	    <td>{{item.Account}}</td>
             <td>{{item.UPC}}</td>
             <td>{{item.Description}}</td>
-            <td>{{item.created_by_name}}</td>
-            <td>{{item.Deal_ID}}</td>
-	    <td>{{item.Deal_Type}}</td>
-	    <td>{{item.Account}}</td>
-	    <td>{{item.Product_Group}}</td>
-	    <td>{{item.Feature}}</td>
-	    <td>{{item.Display_Level}}</td>
+            <td>{{item.Product_Group}}</td>
+            <td>{{item.Suggested_Retail_Price}}</td>
+	    <td>{{item.created_by_name}}</td>
+	    <td>{{item.Internal_Reference_Code}}</td>
+	    <td>{{item.Internal_Item_Number}}</td>
+	    <td>{{item.Unit_Price_FOB}}</td>
+	    <td>{{item.Case_Units}}</td>
             
             
         </tr>
