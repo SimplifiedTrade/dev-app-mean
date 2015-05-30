@@ -18,6 +18,7 @@ angular.module('core').controller('promoController', ['$scope', '$window',  'Aut
 	  promoService.save({
 	  	  created_by: $scope.authentication.user._id
 	  	, created_by_name: $scope.authentication.user.displayName
+	  	, Deal_ID: $scope.newPromo.Deal_ID
 		, Deal_Type: $scope.newPromo.Deal_Type
 		, Account: $scope.newPromo.Account
 		, Product_Group: $scope.newPromo.Product_Group
