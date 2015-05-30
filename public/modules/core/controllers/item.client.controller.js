@@ -8,6 +8,10 @@ angular.module('core').controller('itemController', ['$scope', '$window' ,'Authe
 	// Some example string - remove in prod
         $scope.helloText = 'Item Test';
         $scope.testuser = $scope.authentication.user.displayName;
+        
+        $scope.sortType     = 'name'; // set the default sort type
+	$scope.sortReverse  = false;  // set the default sort order
+	$scope.searchDescription   = '';     // set the default search/filter term
 
 
     	$scope.items = itemService.query();
