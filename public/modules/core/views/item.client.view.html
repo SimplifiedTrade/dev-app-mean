@@ -31,18 +31,19 @@
         <tr>
             <th>UPC</th>
             <th>Description</th>
+            <th>Product Group</th>       
+            <th>Sugg Retail Price</th>            
             <th>Created By</th>
-            <th>Deal ID</th>
-	    <th>Deal Type</hd>
-	    <th>Account</th>
-	    <th>Product Group</th>
-	    <th>Feature</th>
-	    <th>Display Level</th>
+            <th>Internal Reference Code</th>
+	    <th>Internal Item Number</hd>
+	    <th>Unit Price FOB</th>
+	    <th>Case Units</th>
+
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="item in items">
-	    <td>{{item.Account}}</td>
+
             <td>{{item.UPC}}</td>
             <td>{{item.Description}}</td>
             <td>{{item.Product_Group}}</td>
