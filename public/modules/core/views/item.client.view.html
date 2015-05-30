@@ -19,6 +19,21 @@
 </div>
 <div class="row">
 <div class="col-lg-12">
+ <div class="alert alert-info">
+    <p>Sort Type: {{ sortType }}</p>
+    <p>Sort Reverse: {{ sortReverse }}</p>
+    <p>Search Query: {{ searchDescription }}</p>
+  </div>
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+        <input type="text" class="form-control" placeholder="Search da Items" ng-model="searchDescription">
+
+      </div>      
+    </div>
+  </form>
 <div class="ibox float-e-margins animated fadeInRight">
 <div class="ibox-title">
     <h5>Item List</h5>
@@ -42,10 +57,17 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="item in items">
+        <tr ng-repeat="item in items | orderBy:sortType:sortReverse">
 
             <td>{{item.UPC}}</td>
-            <td>{{item.Description}}</td>
+          <!--  <td>{{item.Description}}</td> -->
+            <td>
+            <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+            {{item.Description}}
+            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+            </td>
             <td>{{item.Product_Group}}</td>
             <td>{{item.Suggested_Retail_Price}}</td>
 	    <td>{{item.created_by_name}}</td>
