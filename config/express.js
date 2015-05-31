@@ -21,7 +21,8 @@ var fs = require('fs'),
 	flash = require('connect-flash'),
 	config = require('./config'),
 	consolidate = require('consolidate'),
-	path = require('path');
+	path = require('path'),
+	multer  = require('multer');
 
 module.exports = function(db) {
 	// Initialize express app
@@ -117,6 +118,22 @@ module.exports = function(db) {
 	config.getGlobbedFiles('./app/routes/**/*.js').forEach(function(routePath) {
 		require(path.resolve(routePath))(app);
 	});
+
+	//multer config
+	app.use(multer({ dest: './upload/',
+	 rename: function (fieldname, filename) {
+	    return filename+Date.now();
+	  },
+	onFileUploadStart: function (file) {
+	  console.log(file.originalname + ' is starting ...')
+	},
+	onFileUploadComplete: function (file) {
+	  console.log(file.fieldname + ' uploaded to  ' + file.path)
+	  done=true;
+	}
+	}));
+
+
 
 	// Assume 'not found' in the error msgs is a 404. this is somewhat silly, but valid, you can do whatever you like, set properties, use instanceof etc.
 	app.use(function(err, req, res, next) {
