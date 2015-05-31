@@ -56,6 +56,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
             		url: '/step-three',
             		templateUrl: 'modules/core/views/promo/step_three.html'
         	})
+		.state('upload', {
+			url: '/upload',
+			templateUrl: 'modules/core/views/upload.client.view.html'
+		})
 
 	;
 	}
