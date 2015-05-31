@@ -129,7 +129,6 @@ module.exports = function(db) {
 	},
 	onFileUploadComplete: function (file) {
 	  console.log(file.fieldname + ' uploaded to  ' + file.path)
-	  done=true;
 	}
 	}));
 
