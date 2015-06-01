@@ -7,18 +7,18 @@ var emailSchema = new mongoose.Schema({
   sender: string,
   from: string,
   subject: string,
-  body-plain: string,
-  stripped-text: string,
-  stripped-signature: string,
-  body-html: string,
-  stripped-html: string,
-  attachment-count: string,
-  attachment-x: string,
+  body_plain: string,
+  stripped_text: string,
+  stripped_signature: string,
+  body_html: string,
+  stripped_html: string,
+  attachment_count: string,
+  attachment_x: string,
   timestamp: string,
   token: string,
   signature: string,
-  message-headers: string,
-  content-id-map: string
+  message_headers: string,
+  content_id_map: string
 
 });
 
