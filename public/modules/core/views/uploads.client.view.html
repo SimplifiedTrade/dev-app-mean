@@ -33,14 +33,18 @@
                 <h4>Click button then select Camera to take new photo</h4>
                 <h5>or select existing picture from camera roll</h5>
                 <p>
-                    <input type="file" class="filestyle" data-classButton="btn btn-primary" data-input="false" data-classIcon="icon-plus" data-buttonText="Take a Picture" id="take-picture" accept="image/*">
-                </p>
+	
+                    <input method="post" action="/upload" type="file" class="filestyle" data-classButton="btn btn-primary" data-input="false" data-classIcon="icon-plus" data-buttonText="Take a Picture" id="take-picture" accept="image/*">
+        	</p>
+		<form action="/upload">
+		<input type="file" method="POST" enctype="multipart/form-data"  onchange="this.form.submit()" accept="image/*" name="myFile"/>
+		</form>	
+        
 
 <!--                <h2>Preview:</h2>
                 <p>
                     <img src="about:blank" alt="" id="show-picture">
                 </p>
-
                 <p id="error"></p> -->
 
 
@@ -65,19 +69,15 @@
                     <div ibox-tools></div>
                 </div>
                 <div class="ibox-content">
-                    <form action="/api/photo" class="dropzone" drop-zone="" id="file-dropzone">
+                    <form class="dropzone" drop-zone="" id="file-dropzone">
 			<br>
 			<br>
 			<br>
 			<br>
-			
-			<h1>Click Here to Upload or Drag files to Canvas</h1>
-
 			<br>
 			<br>
 			<br>
-			<br>
-                        <button type="submit" class="btn btn-primary pull-right">Submit this form!</button>
+                        <!-- <button type="submit" class="btn btn-primary pull-right">Submit this form!</button> -->
                     </form>
                     <div>
                         <div class="m text-right">
