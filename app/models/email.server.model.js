@@ -3,22 +3,22 @@ var Schema = mongoose.Schema;
 
 var emailSchema = new mongoose.Schema({
 	created_at: {type: Date, default: Date.now},
-	recipient: string,
-  sender: string,
-  from: string,
-  subject: string,
-  body_plain: string,
-  stripped_text: string,
-  stripped_signature: string,
-  body_html: string,
-  stripped_html: string,
-  attachment_count: string,
-  attachment_x: string,
-  timestamp: string,
-  token: string,
-  signature: string,
-  message_headers: string,
-  content_id_map: string
+	recipient: String,
+	sender: String,
+  	from: String,
+  	subject: String,
+  	body_plain: String,
+  	stripped_text: String,
+  	stripped_signature: String,
+  	body_html: String,
+  	stripped_html: String,
+  	attachment_count: String,
+  	attachment_x: String,
+  	timestamp: String,
+  	token: String,
+  	signature: String,
+  	message_headers: String,
+  	content_id_map: String
 
 });
 
