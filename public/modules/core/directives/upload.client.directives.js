@@ -1,10 +1,11 @@
+
 /**
  * dropZone - Directive for Drag and drop zone file upload plugin
  */
 function dropZone() {
     return function(scope, element, attrs) {
         element.dropzone({
-            url: "/api/photo",
+            url: "/upload",
             maxFilesize: 100,
             paramName: "uploadfile",
             maxThumbnailFilesize: 5,
@@ -27,15 +28,8 @@ function dropZone() {
 }
 
 
-
-
-
-
-/**
- *
- * Pass all functions into module
- */
 angular
     .module('core')
 
     .directive('dropZone', dropZone)
+

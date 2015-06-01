@@ -9,5 +9,9 @@ angular.module('core').controller('testController', ['$scope', 'Authentication',
         // Some example string
         $scope.helloText = 'Test';
         $scope.descriptionText = 'It is an application skeleton for a typical MEAN web app. You can use it to quickly bootstrap your project.';
-	}
+$scope.post = function() { console.log("Working on port 3000"); };
+	
+}
+
 ]);
+

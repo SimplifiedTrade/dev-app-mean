@@ -119,18 +119,30 @@ module.exports = function(db) {
 		require(path.resolve(routePath))(app);
 	});
 
-	//multer config
-	app.use(multer({ dest: './upload/',
-	 rename: function (fieldname, filename) {
-	    return filename+Date.now();
-	  },
+	//multer
+	var done = '';
+	app.use(multer({ dest: './uploads/',
+ 	rename: function (fieldname, filename) {
+  	  return filename+Date.now();
+ 	 },
 	onFileUploadStart: function (file) {
-	  console.log(file.originalname + ' is starting ...')
+ 	 console.log(file.originalname + ' is starting ...');
 	},
 	onFileUploadComplete: function (file) {
-	  console.log(file.fieldname + ' uploaded to  ' + file.path)
+  	console.log(file.fieldname + ' uploaded to  ' + file.path);
+ 	 done=true;
 	}
 	}));
+
+	/*Handling routes.*/
+
+	app.post('/upload',function(req,res){
+ 	 if(done==true){
+ 	   console.log(req.files);
+ 	   res.end("File uploaded.");
+ 	 }
+	});
+
 
 
 
