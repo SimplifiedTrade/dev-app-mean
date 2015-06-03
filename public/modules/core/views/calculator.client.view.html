@@ -19,6 +19,7 @@
 
 
 <div class="wrapper wrapper-content animated fadeIn">
+<fieldset>
     <div class="row">
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
@@ -28,17 +29,23 @@
                     <div ibox-tools></div>
                 </div>
                 <div class="ibox-content">
+<div class="form-group">
   <form novalidate class="simple-form">
-    Cases: <input type="number" ng-model="margin.cases"  />
+  <label>  Cases: </label> 
+<input type="number" ng-model="margin.cases" / >
     <br>
-    Case Quantity: <input type="number" ng-model="margin.caseqty" />
+  <label>   Case Quantity: </label>
+<input type="number" ng-model="margin.caseqty" />
     <br>
     <br>
-    Item Cost: <input type="number" ng-model="margin.itemcost" />
+   <label>  Item Cost: </label>
+<input type="number" ng-model="margin.itemcost" />
     <br>
-    Item Retail: <input type="number" ng-model="margin.itemretail" />
+   <label>  Item Retail: </label>
+<input type="number" ng-model="margin.itemretail" />
     <br>
-    Item Allowance: <input type="number" ng-model="margin.itemallow" />
+   <label>  Item Allowance: </label>
+<input type="number" ng-model="margin.itemallow" />
     <br>
     <br>
     <b> Item Margin % =  {{((margin.itemretail-margin.itemallow-margin.itemcost)/margin.itemcost)*100 | number:1}} </b>
@@ -53,11 +60,55 @@
  <input type="button" ng-click="reset()" value="Reset" />
  <!--     <input type="submit" ng-click="update(user)" value="Save" /> -->
   </form>
-
+</div>
                 </div>
             </div>
         </div>
     </div>
+</fieldset>
+</div>
 
+<div class="wrapper wrapper-content animated fadeIn">
+<fieldset> 
+   <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>ROI Calculator</h5>
+
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+<div class="form-group">
+  <form novalidate class="simple-form">
+   <label> Promotion Expense: </label>
+	<input type="number" ng-model="roi.promoExp" />
+    <br>
+   <label> Gross Sales: </label>
+<input type="number" ng-model="roi.grossSales" />
+    <br>
+   <label> Total Costs: </label>
+<input type="number" ng-model="roi.totalCost" />
+    <br>
+   <label> Overhead Allocation: </label>
+<input type="number" ng-model="roi.overhead" />
+    <br>
+   <label> Incremental Costs: </label>
+<input type="number" ng-model="roi.incCost" />
+    <br>
+    <br>
+    <b> ROI % =  {{((roi.grossSales-roi.promoExp-roi.totalCost-roi.overhead-roi.incCost)/roi.promoExp)*100 | number:2}} </b>
+    <br>    
+    
+    
+ <input type="button" ng-click="reseta()" value="Reset" />
+ <!--     <input type="submit" ng-click="update(user)" value="Save" /> -->
+  </form>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
 </div>
 </div>

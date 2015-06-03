@@ -9,5 +9,10 @@
       };
 
       $scope.reset();
+
+      $scope.reseta = function() {
+        $scope.roi = {};
+      };
+      $scope.reseta();
       
         }]);
