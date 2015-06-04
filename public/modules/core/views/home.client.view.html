@@ -12,7 +12,16 @@
                         <br/>
                         <a class="btn btn-primary btn-xs ng-hide" data-ng-hide="authentication.user" href="#!/signin">Sign In</a> <a class="btn btn-info btn-xs" data-ng-hide="authentication.user" href="#!/signup">Sign Up</a>
                     </small>
-                </div>
+	<div class="row col-md-4 col-md-offset-4">
+       <a href="/#!/item" data-ng-show="authentication.user" class="btn btn-block btn-outline btn-primary"><i class="fa fa-list"></i> <span>Item List</span></a>
+       <a href="/#!/item-form" data-ng-show="authentication.user" class="btn btn-block btn-outline btn-primary"><i class="fa fa-shopping-cart"></i> <span>Item Form</span></a>
+       <a href="/#!/promo" data-ng-show="authentication.user" class="btn btn-block btn-outline btn-primary"><i class="fa fa-money"></i> <span>Promo List</span></a>
+       <a href="/#!/promo-form" data-ng-show="authentication.user" class="btn btn-block btn-outline btn-primary"><i class="fa fa-plus-square"></i> <span>Promo Form</span></a>
+       <a href="/#!/uploads" data-ng-show="authentication.user" class="btn btn-block btn-outline btn-primary"><i class="fa fa-cloud-upload"></i> <span>File Upload</span></a>
+       <a href="/#!/calculator" data-ng-show="authentication.user" class="btn btn-block btn-outline btn-primary"><i class="fa fa-calculator"></i> <span>Calculators</span></a>
+	</div>
+
+		 </div>
             </div>
         </div>
     </div>
