@@ -15,18 +15,18 @@ router.route('/emails')
       email.sender = req.body.sender;
       email.from = req.body.from;
       email.subject = req.body.subject;
-//      email.body_plain = req.body.body-plain;
-//      email.stripped_text = req.body.stripped-text;
-//      email.stripped_signature = req.body.stripped-signature;
-//      email.body_html = req.body.body-html;
-//      email.stripped_html = req.body.stripped-html;
-//      email.attachment_count = req.body.attachment-count;
-//      email.attachment_x = req.body.attachment-x;
+      email.body_plain = req.body['body-plain'];
+      email.stripped_text = req.body['stripped-text'];
+      email.stripped_signature = req.body['stripped-signature'];
+      email.body_html = req.body['body-html'];
+      email.stripped_html = req.body['stripped-html'];
+      email.attachment_count = req.body['attachment-count'];
+      email.attachment_x = req.body['attachment-x'];
       email.timestamp = req.body.timestamp;
       email.token = req.body.token;
       email.signature = req.body.signature;
-//      email.message_headers = req.body.message-headers;
-//      email.content_id_map = req.body.content-id-map;      
+      email.message_headers = req.body['message-headers'];
+      email.content_id_map = req.body['content-id-map'];      
 
     email.save(function(err, email) {
       if (err){
@@ -67,18 +67,18 @@ router.route('/emails/:id')
       email.sender = req.body.sender;
       email.from = req.body.from;
       email.subject = req.body.subject;
-      email.body_plain = req.body.body-plain;
-      email.stripped_text = req.body.stripped-text;
-      email.stripped_signature = req.body.stripped-signature;
-      email.body_html = req.body.body-html;
-      email.stripped_html = req.body.stripped-html;
-      email.attachment_count = req.body.attachment-count;
-      email.attachment_x = req.body.attachment-x;
+      email.body_plain = req.body['body-plain'];
+      email.stripped_text = req.body['stripped-text'];
+      email.stripped_signature = req.body['stripped-signature'];
+      email.body_html = req.body['body-html'];
+      email.stripped_html = req.body['stripped-html'];
+      email.attachment_count = req.body['attachment-count'];
+      email.attachment_x = req.body['attachment-x'];
       email.timestamp = req.body.timestamp;
       email.token = req.body.token;
       email.signature = req.body.signature;
-      email.message_headers = req.body.message-headers;
-      email.content_id_map = req.body.content-id-map;
+      email.message_headers = req.body['message-headers'];
+      email.content_id_map = req.body['content-id-map'];
 
 
 

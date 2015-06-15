@@ -64,7 +64,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: '/calculator',
 			templateUrl: 'modules/core/views/calculator.client.view.html'
 		})
-
+                .state('email', {
+                        url: '/email',
+                        templateUrl: 'modules/core/views/email.client.view.html'
+                })
 	;
 	}
 ]);

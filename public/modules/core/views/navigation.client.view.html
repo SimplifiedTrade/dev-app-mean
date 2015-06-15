@@ -30,6 +30,7 @@
                 <a href="/#!/promo-form" data-ng-show="authentication.user"><i class="fa fa-plus-square"></i> <span class="nav-label">Promo Form</span></a>
                 <a href="/#!/uploads" data-ng-show="authentication.user"><i class="fa fa-cloud-upload"></i> <span class="nav-label">File Upload</span></a>
                 <a href="/#!/calculator" data-ng-show="authentication.user"><i class="fa fa-calculator"></i> <span class="nav-label">Calculators</span></a>
+                <a href="/#!/email" data-ng-show="authentication.user"><i class="fa fa-envelope"></i> <span class="nav-label">Email</span></a>
            
             </li>
             <li data-ng-repeat="item in menu.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" ng-class="{active: ($uiRoute)}">
