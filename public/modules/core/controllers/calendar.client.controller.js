@@ -9,13 +9,7 @@ google.setOnLoadCallback(function() {
 });
 
 angular.module('core').controller('calendarController', ['$scope', 'Authentication',
-  function($scope, Authentication) {
-    // This provides Authentication context.
-    $scope.authentication = Authentication;
-
-        // Some example string
-        $scope.helloText = 'Test';
-
+    function($scope) {
       var data = google.visualization.arrayToDataTable([
         ['Year', 'Sales', 'Expenses'],
         ['2004', 1000, 400],
@@ -29,8 +23,6 @@ angular.module('core').controller('calendarController', ['$scope', 'Authenticati
       var chart = new google.visualization.LineChart(document.getElementById('chartdiv'));
  
       chart.draw(data, options);
-    
-  
-}
+    }
 
 ]); });
