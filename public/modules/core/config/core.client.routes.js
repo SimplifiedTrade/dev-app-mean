@@ -68,6 +68,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                         url: '/email',
                         templateUrl: 'modules/core/views/email.client.view.html'
                 })
+                .state('calendar', {
+			url: '/calendar',
+			templateUrl: 'modules/core/views/calendar.client.view.html'
+		})
 	;
 	}
 ]);
