@@ -16,7 +16,7 @@ angular.module('core').controller('calendarController', ['$scope', 'Authenticati
         // Some example string
         $scope.helloText = 'Test';
 
-    function($scope) {
+    function() {
       var data = google.visualization.arrayToDataTable([
         ['Year', 'Sales', 'Expenses'],
         ['2004', 1000, 400],
