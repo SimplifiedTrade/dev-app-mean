@@ -24,7 +24,7 @@ angular.module('core').controller('calendarController', ['$scope', 'Authenticati
       var chart = new google.visualization.LineChart(document.getElementById('chartdiv'));
  
       chart.draw(data, options);
-    }
+    
      };
 
 ]); });
