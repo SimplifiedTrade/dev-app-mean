@@ -2,6 +2,9 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 	<title>{{title}}</title>
 
 	<!-- General META -->
@@ -81,7 +84,6 @@
 	<!--Application JavaScript Files-->
 	{% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %} 
 	
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	
 	{% if process.env.NODE_ENV === 'development' %}
 	<!--Livereload script rendered -->

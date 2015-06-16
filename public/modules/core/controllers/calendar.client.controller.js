@@ -1,30 +1,43 @@
-(function() {'use strict';
+ 'use strict';
 
-google.load('visualization', '1', {
-  packages: ['corechart']
-});
- 
-google.setOnLoadCallback(function() {
-  angular.bootstrap(document.body, ['core']);
-});
+    angular.module('core').controller('calendarController', function($scope) {
+      $scope.name = "blah"
+    });
 
-angular.module('core').controller('calendarController', ['$scope', 'Authentication',
-     $scope.chart = function() {
-       
-      var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales', 'Expenses'],
-        ['2004', 1000, 400],
-        ['2005', 1170, 460],
-        ['2006', 660, 1120],
-        ['2007', 1030, 540]
-      ]);
-      var options = {
-        title: 'Company Performance'
-      };
-      var chart = new google.visualization.LineChart(document.getElementById('chartdiv'));
- 
-      chart.draw(data, options);
-    
-     }
+   angular.module('core').directive('chart', function() {
+        return {
+          restrict: 'A',
+          link: function($scope, $elm, $attr) {
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data.addRows([
+              ['Mushrooms', 3],
+              ['Onions', 1],
+              ['Olives', 1],
+              ['Zucchini', 1],
+              ['Pepperoni', 2]
+            ]);
 
-]); });
+            // Set chart options
+            var options = {'title':'How Much Pizza I Ate Last Night',
+                           'width':400,
+                           'height':300};
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart($elm[0]);
+            chart.draw(data, options);
+          }
+      }
+    });
+
+
+//    google.setOnLoadCallback(function() {
+//      angular.bootstrap(document.body, ['core']);
+//    });
+    google.load('visualization', '1', {packages: ['corechart']});
+
+
+
+
