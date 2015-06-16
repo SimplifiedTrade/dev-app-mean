@@ -9,7 +9,8 @@ google.setOnLoadCallback(function() {
 });
 
 angular.module('core').controller('calendarController', ['$scope', 'Authentication',
-    function($scope) {
+     $scope.chart = function() {
+       
       var data = google.visualization.arrayToDataTable([
         ['Year', 'Sales', 'Expenses'],
         ['2004', 1000, 400],
@@ -24,5 +25,6 @@ angular.module('core').controller('calendarController', ['$scope', 'Authenticati
  
       chart.draw(data, options);
     }
+     };
 
 ]); });
