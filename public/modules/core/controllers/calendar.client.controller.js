@@ -25,6 +25,6 @@ angular.module('core').controller('calendarController', ['$scope', 'Authenticati
  
       chart.draw(data, options);
     
-     };
+     }
 
 ]); });
